@@ -1,0 +1,8 @@
+/*
+!.gitignore
+!readme.md
+!data/
+data/**
+!data/.gitkeep
+!data/**/*.csv
+!data/**/*.pkl
