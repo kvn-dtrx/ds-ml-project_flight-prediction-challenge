@@ -1,0 +1,27 @@
+name: Validate Notebooks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  check_ipynb:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Inspect .ipynb files for executed cells
+        run: |
+          # Find all staged .ipynb files
+          for file in $(git diff --cached --name-only | grep '\.ipynb$'); do
+            # Check if the file contains executed cells
+            if grep -q '"execution_count": [0-9]' "$file"; then
+              echo "Error: Jupyter Notebook '$file' contains executed cells!"
+              exit 1
+            fi
+          done
+          echo "All notebooks are clean!"
