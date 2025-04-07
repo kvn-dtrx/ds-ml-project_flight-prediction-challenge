@@ -1,9 +1,3 @@
----
-author: Tic, Tric und Trac
-tags:
-    - Foo
----
-
 # DS ML Project ⟡ Flight Delay Prediction Challenge
 
 ## Synopsis
