@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-This notebook represents our[^our] analysis of the ([flight delay dataset for Tunisair]https://zindi.africa/competitions/flight-delay-prediction-challenge) from [Zindi](https://zindi.africa). The general exercise reads as follows:
+This notebook represents our[^our] analysis of the ([flight delay dataset for Tunisair]<https://zindi.africa/competitions/flight-delay-prediction-challenge>) from [Zindi](https://zindi.africa). The general exercise reads as follows:
 
 > **Value of Product**: Build a flight delay predictive model using Machine Learning techniques. The accurate prediction of flight delays will help all players in the air travel ecosystem to set up effective action plans to reduce the impact of the delays and avoid loss of time, capital and resources.
 
@@ -11,6 +11,10 @@ We try to predict the length of flight delay in $\mathrm{min}$. We evaluate our 
 As a baseline model, we choose a linear regression using weekday as predictor for flight delays, resulting in a $\mathrm{RMSE}$ of approximately $114$.
 
 As the main ML model, we used CatBoost that is suited for situation where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
+
+
+
+
 
 [^our]: At last: "our" refers to [MoSeBaur](https://github.com/MoSeBaur), [greseberisha](https://github.com/greseberisha), [kvn-dtrx](https://github.com/kvn-dtrx).
 
