@@ -1,8 +1,8 @@
-# DS ML Project ⟡ Flight Delay Prediction Challenge
+# DS/ML Project: Flight Delay Prediction Challenge
 
 ## Synopsis
 
-This notebook represents our[^our] analysis of the ([flight delay dataset for Tunisair]<https://zindi.africa/competitions/flight-delay-prediction-challenge>) from [Zindi](https://zindi.africa). The general exercise reads as follows:
+This notebook represents our[^our] analysis of the [flight delay dataset for Tunisair](https://zindi.africa/competitions/flight-delay-prediction-challenge) from [Zindi](https://zindi.africa). The general exercise reads as follows:
 
 > **Value of Product**: Build a flight delay predictive model using Machine Learning techniques. The accurate prediction of flight delays will help all players in the air travel ecosystem to set up effective action plans to reduce the impact of the delays and avoid loss of time, capital and resources.
 
@@ -12,11 +12,9 @@ As a baseline model, we choose a linear regression using weekday as predictor fo
 
 As the main ML model, we used CatBoost that is suited for situation where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
 
+## Note was created from
 
-
-
-
-[^our]: At last: "our" refers to [MoSeBaur](https://github.com/MoSeBaur), [greseberisha](https://github.com/greseberisha), [kvn-dtrx](https://github.com/kvn-dtrx).
+<https://github.com/kvn-dtrx/ds-ml-project-template>
 
 ## Requirements
 
@@ -40,10 +38,18 @@ pip install -r requirements.txt
 
 On Windows (with PowerShell), use:
 
-``` shell
+``` powershell
 pyenv local 3.11.3
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+---
+
+## Authors
+
+- [MoSeBaur](https://github.com/MoSeBaur)
+- [greseberisha](https://github.com/greseberisha)
+- [kvn-dtrx](https://github.com/kvn-dtrx)
