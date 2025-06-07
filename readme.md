@@ -12,41 +12,52 @@ As a baseline model, we choose a linear regression using weekday as predictor fo
 
 As the main ML model, we used CatBoost that is suited for situation where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
 
-## Note was created from
+## Installation
 
-<https://github.com/kvn-dtrx/ds-ml-project-template>
-
-## Requirements
+### Requirements
 
 - Python 3.11.3
 - pyenv
-<!-- - Node.js -->
 
-And additionally, as usual, the modules to be installed for the virtual environment are listed in requirements.txt.
+### Setup
 
-## Setup
+1. Navigate to a working directory of your choice, then clone the repository and enter it:
 
-For macOS or Linux, execute:
+   ``` shell
+   git clone https://github.com/julialoeschel/capstone-SignalSigma.git &&
+       cd capstone-SignalSigma
+   ```
 
-``` shell
-pyenv local 3.11.3
-python -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+2. Choose a setup option based on your operating system and intended use:
 
-On Windows (with PowerShell), use:
+   - `make basic-unix` / `make basic-win`: for general use or exploration (core dependencies only).
+   - `make dev-unix` / `make dev-win`: for contributors (includes development tools like linters and pre-commit hooks).
 
-``` powershell
-pyenv local 3.11.3
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+   If you prefer to run the commands manually yourself or want to inspect what each `make` target does first, use the `-n` flag for a dry run. This prints the commands without executing them:
+
+   ``` shell
+   make -n <target>
+   ```
+
+3. Activate the virtual environment:
+
+   - On macOS/Linux, run:
+
+     ```shell
+     source .venv/bin/activate
+     ```
+
+   - On Windows (PowerShell), run:
+
+     ``` powershell
+     .\.venv\Scripts\Activate.ps1
+     ```
 
 ---
+
+## Note was created from
+
+<https://github.com/kvn-dtrx/ds-ml-project-template>
 
 ## Authors
 
