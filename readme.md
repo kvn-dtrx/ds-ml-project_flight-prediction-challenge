@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-This notebook represents our[^our] analysis of the [flight delay dataset for Tunisair](https://zindi.africa/competitions/flight-delay-prediction-challenge) from [Zindi](https://zindi.africa). The general exercise reads as follows:
+This notebook represents our analysis of the [flight delay dataset for Tunisair](https://zindi.africa/competitions/flight-delay-prediction-challenge) from [Zindi](https://zindi.africa). The general exercise reads as follows:
 
 > **Value of Product**: Build a flight delay predictive model using Machine Learning techniques. The accurate prediction of flight delays will help all players in the air travel ecosystem to set up effective action plans to reduce the impact of the delays and avoid loss of time, capital and resources.
 
@@ -59,8 +59,22 @@ As the main ML model, we used CatBoost that is suited for situation where the ma
 
 <https://github.com/kvn-dtrx/ds-ml-project-template>
 
-## Authors
+---
+
+## Colophon
+
+**Authors:**
 
 - [MoSeBaur](https://github.com/MoSeBaur)
 - [greseberisha](https://github.com/greseberisha)
 - [kvn-dtrx](https://github.com/kvn-dtrx)
+
+**Acknowledgements:**
+
+I would like to thank my ghostwriter [Gregory Peter Thompson](https://chatgpt.com).
+
+**Template:**
+This repository was created from the [Template Name](https://github.com/neuefische/ds-ml-project-template) template.
+
+**License:**
+[MIT License](licence.txt)
