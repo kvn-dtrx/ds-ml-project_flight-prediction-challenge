@@ -24,16 +24,16 @@ As the main ML model, we used CatBoost that is suited for situation where the ma
 1. Navigate to a working directory of your choice, then clone the repository and enter it:
 
    ``` shell
-   git clone https://github.com/julialoeschel/capstone-SignalSigma.git &&
-       cd capstone-SignalSigma
+   git clone https://github.com/kvn-dtrx/ds-ml-project_flight-prediction-challenge.git &&
+       cd ds-ml-project_flight-prediction-challenge
    ```
 
-2. Choose a setup option based on your operating system and intended use:
+2. Choose the right setup option based on your operating system:
 
-   - `make basic-unix` / `make basic-win`: for general use or exploration (core dependencies only).
-   - `make dev-unix` / `make dev-win`: for contributors (includes development tools like linters and pre-commit hooks).
+   - `make unix`: macOS/Linux.
+   - `make win`: Windows (PowerShell).
 
-   If you prefer to run the commands manually yourself or want to inspect what each `make` target does first, use the `-n` flag for a dry run. This prints the commands without executing them:
+   If you prefer to run the commands manually yourself or want to inspect what a `make` target does first, use the `-n` flag for a dry run. This prints the commands without executing them:
 
    ``` shell
    make -n <target>
@@ -55,12 +55,6 @@ As the main ML model, we used CatBoost that is suited for situation where the ma
 
 ---
 
-## Note was created from
-
-<https://github.com/kvn-dtrx/ds-ml-project-template>
-
----
-
 ## Colophon
 
 **Authors:**
@@ -69,12 +63,10 @@ As the main ML model, we used CatBoost that is suited for situation where the ma
 - [greseberisha](https://github.com/greseberisha)
 - [kvn-dtrx](https://github.com/kvn-dtrx)
 
-**Acknowledgements:**
-
-I would like to thank my ghostwriter [Gregory Peter Thompson](https://chatgpt.com).
-
 **Template:**
-This repository was created from the [Template Name](https://github.com/neuefische/ds-ml-project-template) template.
+
+This repository was created from the [Neue Fische DS/ML Project Template](https://github.com/neuefische/ds-ml-project-template).
 
 **License:**
+
 [MIT License](licence.txt)
