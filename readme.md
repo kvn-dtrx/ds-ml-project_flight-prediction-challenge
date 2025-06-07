@@ -12,6 +12,16 @@ As a baseline model, we choose a linear regression using weekday as predictor fo
 
 As the main ML model, we used CatBoost that is suited for situation where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
 
+## Repository Organisation
+
+The organization of the repository follows common conventions and therefore requires little explanation. For a quick orientation, we mention only the following:
+
+| Path | Content |
+| --- | --- |
+| [`./notebooks/*.ipynb`](./notebooks) | Analysis notebooks with technical details |
+| [`./docs/slides.html`](./docs/slides.md) | Presentation slides for non-technical audience |
+| [`./plots/*.png`](./docs) | Plots created by the notebooks |
+
 ## Installation
 
 ### Requirements
@@ -57,16 +67,8 @@ As the main ML model, we used CatBoost that is suited for situation where the ma
 
 ## Colophon
 
-**Authors:**
+**Authors:** [MoSeBaur](https://github.com/MoSeBaur), [greseberisha](https://github.com/greseberisha), [kvn-dtrx](https://github.com/kvn-dtrx)
 
-- [MoSeBaur](https://github.com/MoSeBaur)
-- [greseberisha](https://github.com/greseberisha)
-- [kvn-dtrx](https://github.com/kvn-dtrx)
+**Template:** This repository was created from the [Neue Fische DS/ML Project Template](https://github.com/neuefische/ds-ml-project-template).
 
-**Template:**
-
-This repository was created from the [Neue Fische DS/ML Project Template](https://github.com/neuefische/ds-ml-project-template).
-
-**License:**
-
-[MIT License](licence.txt)
+**License:** [MIT License](licence.txt)
