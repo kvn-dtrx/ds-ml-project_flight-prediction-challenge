@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>DS/ML Project: Flight Prediction Challenge</title>
+  <meta name="author" content="Gresë Berisha, Moritz Baur, Kevin Dietrich">
+  <meta name="date" content="2025-03-17" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="assets/reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="assets/reveal.js/dist/theme/black.css" />
+  <script src="assets/reveal.js/dist/reveal.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- 1 -->
+      <section style="text-align: center;">
+        <h1>DS/ML Project: Flight Delay Prediction for Tunisair</h1>
+        <img src="assets/images/central-image.png" alt="Central Image" style="max-width: 400px; width: 80%; margin: 20px auto;" />
+        <p>
+          <strong>Gresë Berisha</strong><br/>
+          <strong>Moritz Baur</strong>
+          <strong>Kevin Dietrich</strong><br/>
+        </p>
+      </section>
+
+      <!-- 2 -->
+      <section>
+        <h2>Problem and Motivation</h2>
+        
+        <h3>✈ Problem</h3>
+        <ul>
+          <li>Flight delays are disruptive and costly.</li>
+          <li>Passengers lose time ⏱ and confidence.</li>
+          <li>Airlines and airports face financial losses 💼 and reduced operational efficiency.</li>
+        </ul>
+        
+        <h3>📈 Motivation</h3>
+        <ul>
+          <li>Tunisair aims to implement a predictive solution to anticipate delays and mitigate their impact.</li>
+        </ul>
+      </section>
+
+      <!-- 3 -->
+      <section>
+        <h2>🎯 Project Objective</h2>
+        
+        <h3>🥅 Goal</h3>
+        <p>Use machine learning to predict the length of flight delays (in minutes).</p>
+        
+        <h3>💥 Impact</h3>
+        <ul>
+          <li>✔ Better scheduling</li>
+          <li>✔ Reduced operational inefficiencies</li>
+          <li>✔ Improved passenger satisfaction</li>
+        </ul>
+      </section>
+
+    <!-- 4 -->
+    <section>
+      <h2>Dataset and Evaluation</h2>
+
+      <h3>Data Source</h3>
+      <p>📁 Flight data provided by Zindi, consisting of a train/test format for model development</p>
+
+      <h3>Prediction Target:</h3>
+      <p>🕒 Delay duration in minutes</p>
+
+      <h3>Performance Metric:</h3>
+      <p>📉 Root Mean Square Error (RMSE)</p>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2>Exploratory Data Analysis (EDA)</h2>
+
+      <h3>🔍 Initial Insights from EDA</h3>
+      <p>We analysed how delays are distributed based on:</p>
+      <ul>
+        <li>Departure airports</li>
+        <li>Arrival airports</li>
+        <li>Temporal trends across the years 2016–2018</li>
+      </ul>
+    </section>
+
+    <!-- 6 -->
+    <section>
+    <h2>Column Description</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Column</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>ID</td><td>Unique flight identifier</td></tr>
+        <tr><td>DATOP</td><td>Date of flight</td></tr>
+        <tr><td>FLTID</td><td>Flight number</td></tr>
+        <tr><td>DEPSTN</td><td>Departure point</td></tr>
+        <tr><td>ARRSTN</td><td>Arrival point</td></tr>
+        <tr><td>STD</td><td>Scheduled time of departure</td></tr>
+        <tr><td>STA</td><td>Scheduled time of arrival</td></tr>
+        <tr><td>STATUS</td><td>Flight status</td></tr>
+        <tr><td>AC</td><td>Aircraft code</td></tr>
+        <tr><td>target</td><td>Flight delay (min)</td></tr>
+      </tbody>
+    </table>
+    </section>
+
+    <!-- 7 -->
+    <!-- Mean Delay per Airport -->
+
+    <!-- 8 -->
+    <section>
+      <h2>Deriving flight time from STD and STA</h2>
+      <h2>Removing Service Flights?</h2>
+      <p style="margin-bottom: 1.5em;">Flights where departure and arrival airports are the same</p>
+
+      <div style="display: flex; align-items: center; justify-content: center; gap: 2em;">
+        <img src="assets/imgs/same-airports-before.png" alt="Before filtering" width="300" />
+        <span style="font-size: 2em;">⇒</span>
+        <img src="assets/imgs/same-airports-after.png" alt="After filtering" width="300" />
+      </div>
+    </section>
+    <!--  -->
+    
+    <!-- 9 -->
+    <section>
+      <h2>Dissecting DATOP into YEAR, month and day of the week</h2>
+    </section>
+    <!-- Plus four plots -->
+    
+    <section>
+      <h2>Dissecting DATOP into YEAR, month and day of the week</h2>
+    </section>
+    <!-- Plus four plots -->
+        
+    <!-- 10 -->
+    <section>
+      <h2>Baseline Model</h2>
+
+      <p><strong>Initial Approach:</strong></p>
+      <p>
+        A simple linear regression model using only the day of the week<br />
+        (or aircraft code) as the predictor.
+      </p>
+
+      <p><strong>Baseline Performance:</strong></p>
+      <ul>
+        <li>📊 RMSE ≈ <strong>114.69</strong></li>
+        <li>🤖 R² ≈ <strong>3.01 %</strong></li>
+      </ul>
+    </section>
+
+    <!-- 11 -->
+    <section>
+      <h2>ML Model</h2>
+      <p>Many categorical variables ...</p>
+      <p>... but there is:</p>
+      <!-- TODO: Replace image -->
+      <img src="assets/plots/your-image.png" alt="ML Model illustration" style="max-width: 700px; width: 100%;" />
+    </section>
+
+    <!-- 12 -->
+    <section>
+      <h2>ML Model</h2>
+      
+      <h3>Approach:</h3>
+      <p>A regression model using the CatBoost method with the predictors:</p>
+      <ul>
+        <li>Flight Status</li>
+        <li>Aircraft Code</li>
+        <li>Departure and Arrival Point</li>
+        <li>Year, month and weekday of Departure Time</li>
+      </ul>
+      
+      <h3>Baseline Performance:</h3>
+      <ul>
+        <li>📊 RMSE ≈ 96.14 (&lt; 100)</li>
+        <li>🤖 R² ≈ 30.48 %</li>
+      </ul>
+      
+      <img src="assets/plots/ml-model-placeholder.png" alt="ML Model Illustration" style="max-width: 700px; width: 100%;" />
+    </section>
+
+    <!-- 13 -->
+    <section>
+      <h2>💬 Questions and Feedback</h2>
+      <p>We’re happy to answer any questions and look forward to your feedback.</p>
+    </section>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--       
+
+      <section data-background-color="#000" data-transition="fade">
+        <h4>An Analysis of the House Sales Prices in King County</h4>
+        <p>for</p>
+        <h5>Miss Amy Williams</h5>
+
+        <h2>🏠 👑 🏠</h2>
+
+        <p style="font-size: 14px; color: hotpink;">
+          <strong>Kevin Dietrich</strong><br />
+          2025-03-17
+        </p>
+      </section>
+
+      <section>
+        <h1>Getting Familiar with the Data Set</h1>
+      </section>
+
+      <section>
+        <h2>Hypothesis #1</h2>
+        <p><strong>The more bathrooms, the more bedrooms.</strong></p>
+        <p><em>Is it true???</em></p>
+      </section>
+
+      <section>
+        <p><strong>The more bathrooms, the more bedrooms. (?)</strong></p>
+        <p style="color: hotpink; font-weight: bold; font-size: 1.2em;">YES!</p>
+        <img src="assets/plots/bathrooms-vs-bedrooms.png" alt="Scatterplot Bathrooms vs. Bedrooms" width="500" height="400" />
+        <p><small>[Correlation ≈ 0.5]</small></p>
+      </section>
+
+      <section>
+        <h2>Hypothesis #2</h2>
+        <p><strong>The presence of a waterfront affects the prize.</strong></p>
+        <p>Is it true???</p>
+      </section>
+
+      <section>
+        <p><strong>The presence of a waterfront affects the prize. (?)</strong></p>
+        <p style="color: hotpink; font-weight: bold; font-size: 1.2em;">YES!</p>
+        <img src="assets/plots/price-on-waterfront.png" alt="Scatterplot Price on Waterfront" width="600" height="375" />
+      </section>
+
+      <section>
+        <h2>Hypothesis #3</h2>
+        <p><strong>The latitude and the longitude of a house location do not affect each other.</strong></p>
+        <p>Is it true???</p>
+      </section>
+
+      <section>
+        <p><strong>The latitude and the longitude of a house location do not affect each other. (?)</strong></p>
+        <p>Probably <span style="color: hotpink; font-weight: bold;">YES!</span></p>
+        <img src="assets/plots/lat-vs-long.png" alt="Scatterplot Latitude vs. Longitude" width="500" height="375" />
+        <p><small>[Correlation ≈ -0.1]</small></p>
+      </section>
+
+      <section>
+        <h2>Our Client</h2>
+        <p>
+          Amy Williams, Seller, <span style="color: gray; text-decoration: line-through;">Mafiosa</span> 
+          <span style="color: red;">businesswoman by trade</span>, sells several central houses (top 10%) over time, needs average outskirt houses over time to 
+          <span style="color: gray; text-decoration: line-through;">hide from the FBI</span> 
+          <span style="color: red;">avoid entanglements with the FBI</span>.
+        </p>
+      </section>
+
+      <section>
+        <p>
+          Amy Williams, Seller, businesswoman by trade, sells several central houses (top 10%) over time, needs average outskirt houses over time to avoid entanglements with the FBI.
+        </p>
+
+        <h3>⇒ How to define ...</h3>
+        <ul>
+          <li>(top 10%) <strong>centrality</strong>?</li>
+          <li><strong>exceptionality</strong> (on the outskirts)?</li>
+          <li>"<strong>privacy</strong>" (on the outskirts)?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>How to define ...</h3>
+        <ul>
+          <li>(top 10%) <span style="color: hotpink;"><strong>centrality</strong>?</span></li>
+          <li><strong>exceptionality</strong> (on the outskirts)?</li>
+          <li>"<strong>privacy</strong>" (on the outskirts)?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>(Top 10%) Centrality?</h3>
+        <p style="font-size: 20px;">
+          Take the number of neighbours in a vicinity of fixed size!
+        </p>
+        <img src="assets/plots/centrality-plot.png" alt="Scatterplot Centrality" width="600" height="400" />
+        <p><small>⇒ Sell "green" and buy "red" houses!</small></p>
+      </section>
+
+      <section>
+        <h3>How to define ...</h3>
+        <ul>
+          <li>(top 10%) <strong>centrality</strong>?</li>
+          <li><span style="color: hotpink;"><strong>exceptionality</strong></span> (on the outskirts)?</li>
+          <li>"<strong>privacy</strong>" (on the outskirts)?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Exceptionality?</h3>
+        <p style="font-size: 20px;">
+          A house becomes more exceptional the more it differs from its immediate neighbours in terms of living space and lot size!
+        </p>
+        <img src="assets/plots/exceptionality-plot.png" alt="Scatterplot Exceptionality" width="600" height="400" />
+        <p><small>⇒ Avoid regions indicated by the cursor!</small></p>
+      </section>
+
+      <section>
+        <h3>How to define ...</h3>
+        <ul>
+          <li>(top 10%) <strong>centrality</strong>?</li>
+          <li><strong>exceptionality</strong> (on the outskirts)?</li>
+          <li><span style="color: hotpink;"><strong>"privacy"</strong></span> (on the outskirts)?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Privacy</h3>
+        <p style="font-size: 20px;">
+          Take the presence of a basement!
+        </p>
+        <img src="assets/plots/privacy-plot.png" alt="Scatterplot Privacy" width="600" height="400" />
+        <p><small>⇒ Avoid regions indicated by the cursor!</small></p>
+      </section>
+
+      <section>
+         <h1><span style="color: white;">∎</span></h1>
+      </section> -->
+
+    </div>
+  </div>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      // other options you want
+    });
+  </script>
+</body>
+</html>

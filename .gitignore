@@ -4,15 +4,17 @@
 
 # Project-specific
 
-# Side product of slide exports
-slides.html
 # Data directory
 data/*
 !data/.gitkeep
+
 # Plots directory
 plots/*
 !plots/.gitkeep
+
 # Plots directory
 models/*
 !models/.gitkeep
+
+# Catboost artifact
 catboost_info/

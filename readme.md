@@ -8,9 +8,14 @@ This notebook represents our analysis of the [flight delay dataset for Tunisair]
 
 We try to predict the length of flight delay in $\mathrm{min}$. We evaluate our models with the root mean square error ($\mathrm{RMSE}$), in alignment with the requirements of the challenge.
 
-As a baseline model, we choose a linear regression using weekday as predictor for flight delays, resulting in a $\operatorname{RMSE}$ of approximately $114$.
+As a baseline model, we choose a linear regression using weekday as predictor for flight delays, resulting in a $\mathrm{RMSE}$ of approximately $114$.
 
 As the main ML model, we used CatBoost that is suited for situations where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
+
+<!-- 
+NOTE: Correct LaTeX usage here would be `\operatorname` instead of `\mathrm`. 
+But GitHub cannot render the former macro.
+-->
 
 ## Repository Organisation
 
@@ -69,4 +74,4 @@ The organization of the repository follows common conventions and therefore requ
 
 **Template:** This repository was created from the [Neue Fische DS/ML Project Template](https://github.com/neuefische/ds-ml-project-template).
 
-**License:** [MIT License](licence.txt)
+**License:** [MIT License](license.txt)
