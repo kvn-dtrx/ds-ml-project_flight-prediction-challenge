@@ -1,8 +1,10 @@
-# **DS ML Project**: Flight Delay Prediction Challenge
+# DS ML Project: Flight Delay Prediction Challenge
 
 ## Synopsis
 
-This repository contains our analysis of the [flight delay dataset for Tunisair](https://zindi.africa/competitions/flight-delay-prediction-challenge) from [Zindi](https://zindi.africa). The general exercise reads as follows:
+This repository contains our analysis of the [flight delay dataset for Tunisair](https://zindi.africa/competitions/flight-delay-prediction-challenge) (but compare also with [this kaggle dataset](https://www.kaggle.com/datasets/abderrahimalakouche/flight-delay-prediction) from [Zindi](https://zindi.africa).
+
+The general exercise reads as follows:
 
 > **Value of Product**: Build a flight delay predictive model using Machine Learning techniques. The accurate prediction of flight delays will help all players in the air travel ecosystem to set up effective action plans to reduce the impact of the delays and avoid loss of time, capital and resources.
 
@@ -39,8 +41,8 @@ The organization of the repository follows common conventions and therefore requ
 1. Navigate to a working directory of your choice, then clone the repository and enter it:
 
    ``` shell
-   git clone https://github.com/kvn-dtrx/ds-ml-project_flight-prediction-challenge.git &&
-       cd ds-ml-project_flight-prediction-challenge
+   git clone https://github.com/kvn-dtrx/ds-ml-project_flight-delay-prediction.git &&
+       cd ds-ml-project_flight-delay-prediction
    ```
 
 2. Choose the right setup option based on your operating system:

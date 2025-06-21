@@ -146,7 +146,7 @@ data/*
 plots/*
 !plots/.gitkeep
 
-# Plots directory
+# Models directory
 models/*
 !models/.gitkeep
 
