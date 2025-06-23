@@ -2,17 +2,17 @@
 
 ## Synopsis
 
-This repository contains our analysis of the [flight delay dataset for Tunisair](https://zindi.africa/competitions/flight-delay-prediction-challenge) (but compare also with [this kaggle dataset](https://www.kaggle.com/datasets/abderrahimalakouche/flight-delay-prediction) from [Zindi](https://zindi.africa).
+This repository contains our analysis of the [flight delay dataset for Tunisair](https://zindi.africa/competitions/flight-delay-prediction-challenge) from [Zindi](https://zindi.africa).
 
 The general exercise reads as follows:
 
 > **Value of Product**: Build a flight delay predictive model using Machine Learning techniques. The accurate prediction of flight delays will help all players in the air travel ecosystem to set up effective action plans to reduce the impact of the delays and avoid loss of time, capital and resources.
 
-We try to predict the length of flight delay in $\mathrm{min}$. We evaluate our models with the root mean square error ($\mathrm{RMSE}$), in alignment with the requirements of the challenge.
+We try to predict the flight delay duration in $\mathrm{min}$. We evaluate our models with the root mean square error ($\mathrm{RMSE}$), in alignment with the requirements of the challenge.
 
-As a baseline model, we choose a *linear regression* using weekday as predictor for flight delays, resulting in a $\mathrm{RMSE}$ of approximately $114$.
+As a baseline model, we choose a **linear regression** using weekday as predictor for flight delays, resulting in a $\mathrm{RMSE}$ of approximately $114$.
 
-As the main ML model, we use *CatBoost* that is suited for situations where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
+As the main ML model, we use **CatBoost** that is suited for situations where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
 
 <!-- 
 NOTE: Correct LaTeX usage here would be `\operatorname` instead of `\mathrm`. 
@@ -21,13 +21,7 @@ But GitHub cannot render the former macro.
 
 ## Repository Organisation
 
-The organization of the repository follows common conventions and therefore requires little explanation. For a quick orientation, we mention only the following:
-
-| Path | Content |
-| --- | --- |
-| [`./notebooks/*.ipynb`](./notebooks) | Analysis notebooks with technical details |
-| [`./docs/presentation.html`](./docs/presentation.html) | Presentation slides for a non-technical audience |
-| [`./plots/*.png`](./docs) | Plots created by the notebooks |
+The organization of the repository follows common conventions and therefore requires little explanation. Let us only mention that our analysis notebooks (with technical details) is subordinated to [`notebooks/`](./notebooks/) and that our presentation slides for a non-technical audience can be found in [`docs/`](./docs/).
 
 ## Installation
 
