@@ -143,12 +143,13 @@ data/*
 !data/.gitkeep
 
 # Plots directory
-plots/*
-!plots/.gitkeep
+**/plots/*
+!**/plots/.gitkeep
 
 # Models directory
 models/*
 !models/.gitkeep
 
-# Catboost artifact
-catboost_info/
+# Logs directory
+**/logs/*
+!**/logs/.gitkeep

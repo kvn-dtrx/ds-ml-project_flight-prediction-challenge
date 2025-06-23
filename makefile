@@ -22,9 +22,9 @@ unix:
 	pyenv local $(PYTHON_VERSION)
 	python -m venv $(VENV)
 	$(VENV)/bin/python -m pip install --upgrade pip
-	$(VENV)/bin/python -m pip install -r requirements.txt
+	$(VENV)/bin/python -m pip install -e .
 win:
 	pyenv local $(PYTHON_VERSION)
 	python -m venv $(VENV)
 	.\$(VENV)\Scripts\python.exe -m pip install --upgrade pip
-	$(VENV)/bin/python -m pip install -r requirements.txt
+	$(VENV)/bin/python -m pip install -e .
