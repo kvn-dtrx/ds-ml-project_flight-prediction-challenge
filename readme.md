@@ -1,4 +1,4 @@
-# DS ML Project: Flight Delay Prediction Challenge
+# DS ML Project: Flight Delay Prediction
 
 ## Synopsis
 
