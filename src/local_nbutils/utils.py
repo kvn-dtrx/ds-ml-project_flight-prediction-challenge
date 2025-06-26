@@ -4,7 +4,7 @@
 
 import os
 import matplotlib.pyplot as plt
-from local_nbutils.cfg import CFG
+from ipynb_utils.cfg import CFG
 
 
 def plt_savefig(

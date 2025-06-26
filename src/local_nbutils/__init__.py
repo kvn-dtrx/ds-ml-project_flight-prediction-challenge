@@ -1,5 +1,5 @@
 # ---
-# description: __init__ file for local_nbutils.
+# description: __init__ file for ipynb_utils.
 # ---
 
 from .utils import *

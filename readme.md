@@ -12,7 +12,7 @@ We try to predict the flight delay duration in $\mathrm{min}$. We evaluate our m
 
 As a baseline model, we choose a **linear regression** using weekday as predictor for flight delays, resulting in a $\mathrm{RMSE}$ of approximately $114$.
 
-As the main ML model, we use **CatBoost** that is suited for situations where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
+As the main ML model, we employ **CatBoost** that is suited for situations where the majority of features is categorical, resulting in a $\mathrm{RMSE}$ of approximately $96$.
 
 <!-- 
 NOTE: Correct LaTeX usage here would be `\operatorname` instead of `\mathrm`. 
@@ -21,7 +21,7 @@ But GitHub cannot render the former macro.
 
 ## Repository Organisation
 
-The organization of the repository follows common conventions and therefore requires little explanation. Let us only mention that our analysis notebooks (with technical details) is subordinated to [`notebooks/`](./notebooks/) and that our presentation slides for a non-technical audience can be found in [`docs/`](./docs/).
+The organisation of the repository follows common conventions and therefore requires little explanation. Let us only mention that our analysis notebooks (with technical details) is subordinated to [`notebooks/`](./notebooks/) and that our presentation slides for a non-technical audience can be found in [`docs/`](./docs/).
 
 ## Installation
 
